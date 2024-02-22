@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <div class="content-body">
+			<div class="container">
+				<div class="row">
+					<main class="col-md-12">
+						<div class="widget widget-recent-posts">		
+							<h3 class="widget-title">All the genres in our store</h3>	
+                            <p>{{ random }}</p>	
+							<ul>
+								{% for genre in genres %}
+								<li>
+									<a href="#">{{genre}}</a>
+								</li>
+                                {% endfor %}
+							</ul>
+						</div>
+					</main>
+				</div>
+			</div>
+		</div>
+{% endblock %}

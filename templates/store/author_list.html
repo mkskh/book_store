@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+        <div class="content-body">
+			<div class="container">
+				<div class="row">
+					<main class="col-md-12">
+						<div class="widget widget-recent-posts">		
+							<h3 class="widget-title">All the authors in our store</h3>		
+							<ul>
+								{% for author in authors %}
+								<li>
+									<a href="#">{{ author }}</a>
+								</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</main>
+				</div>
+			</div>
+		</div>
+
+{% endblock %}

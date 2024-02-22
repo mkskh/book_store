@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+<title>Pytech Bookstore</title> 
+
+{% endblock %}
+
+{% block content %}
+		<div class="content-body">
+			<div class="container">
+				<div class="row">
+					<main class="col-md-12">
+						<h1 class="page-title">Welcome to the Pytech Bookstore</h1>
+						<article class="post">
+							<div class="entry-content clearfix">
+								<p>
+									Have you ever wondered how many books have been published? 
+									Although it’s impossible for us to come up with an exact number, 
+									according to Google, they believe it is around 130 million books! 
+									Head on over to our store to explore all the possibilities that books can give us.
+								</p>
+								<p>
+									Number of books in stock: {{ num_of_book }}
+								</p>								
+								<div class="height-40px"></div>				
+								<div class="read-more cl-effect-14">
+									<a href="{% url 'store:books_list' %}" class="more-link">Check out our store<span class="meta-nav">→</span></a>
+								</div>
+								<div class="height-40px"></div>
+							</div>
+						</article>
+					</main>
+				</div>
+			</div>
+		</div>
+{% endblock %}
+

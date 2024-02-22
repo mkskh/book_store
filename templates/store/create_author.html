@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="content-body">
+    <div class="container">
+        <div class="row">
+            <main class="col-md-12">
+                <form method="post">
+                    {% csrf_token %}
+                    <p> {{form.first_name.label}} - {{ form.first_name }}</p>
+                    <p> {{form.last_name.label}} - {{ form.last_name }}</p>
+                    <p> {{form.email.label}} - {{ form.email }}</p>
+                    <p> {{form.date_of_birth.label}} - {{ form.date_of_birth }}</p>
+                    <p> {{form.number_of_books.label}} - {{ form.number_of_books }}</p>
+                    <input type="Submit" value="Save">
+                </form>
+            </main>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
